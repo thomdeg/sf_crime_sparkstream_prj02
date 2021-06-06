@@ -26,15 +26,16 @@ Task: Write the answers to these questions in the README.md doc of your GitHub r
 
 Answer 1: The most important parameters for kafka spark streaming are 
 
-maxOffsetsPerTrigger which is the limit on maximum number of offsets processed per trigger interval. 
+maxOffsetsPerTrigger which is the limit on maximum number of offsets processed per trigger interval. (from the docu)
 
  and 
 
 maxRatePerPartition which is the maximum rate (in messages per second) at which each Kafka partition will be read. 
 
-(see: https://spark.apache.org/docs/1.6.1/streaming-kafka-integration.html)
+(from the docu) (see: https://spark.apache.org/docs/1.6.1/streaming-kafka-integration.html)
 
-So a small value for maxOffsetsPerTrigger and a small maxRatePerPartition can improve latency for stream queries.
+So, a small value for maxOffsetsPerTrigger and a small maxRatePerPartition can improve latency for stream queries.
+Both can reduce the amount of data for a trigger.
 
 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
